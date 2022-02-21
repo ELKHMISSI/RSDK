@@ -1,25 +1,20 @@
-#
-# This is the user-interface definition of a Shiny web application. You can
-# run the application by clicking 'Run App' above.
-#
-# Find out more about building applications with Shiny here:
-#
-#    http://shiny.rstudio.com/
-#
-
 library(shiny)
 
-# Define UI for application that draws a histogram
 shinyUI(fluidPage(
+  titlePanel("RSDK"),
 
-    # Application title
-    titlePanel("Old Faithful Geyser Data"),
+  sidebarPanel(
+    h3("Sudoku with R"),
+    actionButton("StartButton", "Start", icon = NULL),
+    actionButton("NewGame", "New Game", icon = NULL),
+    actionButton("Check", "Check ", icon = NULL),
+    selectInput("Lv", "Level:", choices = c("Easy", "Difficult","Hard")),
+    selectInput(inputId = "row",label = "Row", choices = 1:9),
+    selectInput(inputId = "col",label = "Column", choices = 1:9),
+    selectInput(inputId = "val",label = "Value", choices = 1:9),
+  ),
 
-      actionButton("num",'Mmmmmmmm')
-        ,
-
-        # Show a plot of the generated distribution
-        mainPanel(
-        )
-    )
-)
+  mainPanel(
+ plotOutput('plot')
+  )
+))
