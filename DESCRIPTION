@@ -9,7 +9,7 @@ Description: RSDK is a sudoku game package with a shiny application for playing 
     A complete sudoku grid generator.    
     incomplete sudoku grid generator for four levels.
     Backtraking solver,and a recurcive solver for the incomplete grids.
-License: GPL-3
+License:MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.2
