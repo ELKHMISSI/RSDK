@@ -1,12 +1,4 @@
-_Social buttons_
-
 [![ELKHMISSI - RSDK](https://img.shields.io/static/v1?label=ELKHMISSI&message=RSDK&color=success&logo=github)](https://github.com/ELKHMISSI/RSDK "Go to GitHub repo")
-[![stars - RSDK](https://img.shields.io/github/stars/ELKHMISSI/RSDK?style=social)](https://github.com/ELKHMISSI/RSDK)
-[![forks - RSDK](https://img.shields.io/github/forks/ELKHMISSI/RSDK?style=social)](https://github.com/ELKHMISSI/RSDK)
-
-_Repo metadata_
-
-
 [![GitHub tag](https://img.shields.io/github/tag/ELKHMISSI/RSDK?include_prereleases=&sort=semver&color=success)](https://github.com/ELKHMISSI/RSDK/releases/)
 [![License](https://img.shields.io/badge/License-MIT-success)](#license)
 
