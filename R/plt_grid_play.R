@@ -1,4 +1,14 @@
-################################# plot grid in playing
+#' plt_grid_play()
+#'
+#' This function gives a reactive plot of the grid for the shiny application
+#'
+#' @param B Initial grid
+#' @param x The grid that the user put the numbers on it
+#'
+#' @return a plot of the grid with the user input with a different color red if the input is on the wrong cell and green if the input is on the right cell
+#' @importFrom grDevices rgb
+#' @importFrom graphics lines par plot rect text
+#' @export
 plt_grid_play <- function(B, x) {
   par(mar = c(0, 0, 0, 0))
   plot(
@@ -20,9 +30,9 @@ plt_grid_play <- function(B, x) {
       }
       else {
         if (!is.na(x[i, j])) {
-          y = x
-          a = x[i, j]
-          y[i, j] = NA
+          y <- x
+          a <- x[i, j]
+          y[i, j] <- NA
           if (ispossible(y, i, j, a)) {
             rect(j - .5, 9.5 - i, j + .5, 10.5 - i, col = rgb(0, 1, 0, .3))
             text(j, 10 - i, a, cex = 2, col = "darkblue")

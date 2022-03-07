@@ -1,14 +1,23 @@
 Package: RSDK
 Type: Package
-Title: What the Package Does (Title Case)
-Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Title: Sudoku with R
+Version: 1.0.0
+Author: EL KHMISSI Mohamed <mohammed.el-khmissi01@etu.umontpellier.fr>
+Maintainer: EL KHMISSI Mohamed <mohammed.el-khmissi01@etu.umontpellier.fr>
+Description: RSDK is a sudoku game package with a shiny application for playing in the game.
+    The package contains 
+    A complete sudoku grid generator.    
+    incomplete sudoku grid generator for four levels.
+    Backtraking solver,and a recurcive solver for the incomplete grids.
+License: GPL-3
 Encoding: UTF-8
 LazyData: true
-Suggests: 
-    testthat (>= 3.0.0)
+RoxygenNote: 7.1.2
+Imports:
+    testthat (>= 3.0.0),
+    graphics,
+    grDevices,
+    shiny,
+    shinyWidgets,
+    keys
 Config/testthat/edition: 3

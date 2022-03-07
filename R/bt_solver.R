@@ -1,5 +1,11 @@
-################# backtraking solver
-
+#' bt_solver()
+#'
+#' This function is a recurcive function that solves a sudoku grid using the backtraking algorithme
+#'
+#' @param x A sudoku grid
+#' @return A list of two elements in the first one there is the grid x solved as a matrix of 9 by 9, and the second one contains the number of backtraking does R do to solving it.
+#' @examples bt_solver(x=grid_gen(49))
+#' @export
 bt_solver <- function(x) {
   bt.env <- new.env()
   bt.env$x <- x
@@ -17,7 +23,7 @@ bt_solver <- function(x) {
     }
 
 
-  isVal <- function (s) {
+  isVal <- function(s) {
     if (nrow(s) == 0) {
       return(T)
     }
@@ -32,7 +38,7 @@ bt_solver <- function(x) {
         bt.env$I[i + 1, k] <<- T
         bt.env$J[j + 1, k] <<- T
         bt.env$B[(3 * (i %/% 3) + (j %/% 3) + 1), k] <<- T
-        if (isVal(s[-1,])) {
+        if (isVal(s[-1, ])) {
           bt.env$x[i + 1, j + 1] <<- k
           bt.env$n <- bt.env$n - 1
           return(T)
@@ -50,6 +56,3 @@ bt_solver <- function(x) {
   return(L)
 
 }
-
-
-

@@ -2,9 +2,21 @@ library(shiny)
 devtools::load_all("D:/2021-2022/S2/PROG R/Project/RSDK/")
 
 shinyServer(function(input, output) {
-  A = NULL
-  B = NULL
-  k = NULL
+  A <- NULL
+  B <- NULL
+  k <- NULL
+
+
+  Lv <- reactiveVal()
+  observeEvent(input$Nglv, {
+    Lv(paste("You are currently in the", input$Nglv , " level"))
+  })
+  observeEvent(input$strlv, {
+    Lv(paste("You are currently in the", input$strlv , " level"))
+  })
+  output$Lv <- renderText(Lv())
+
+
 
   observeEvent(input$StartButton, {
     inputSweetAlert(
@@ -16,12 +28,15 @@ shinyServer(function(input, output) {
   })
 
   observeEvent(input$strlv, {
-    output$plot <- renderPlot({
-      a = grid_gen_lv(input$strlv)
-      plt_grid(a)
-      A <<- a
-      B <<- a
-    }, bg = "transparent")
+      output$plot <- renderPlot({
+        if(!is.null(input$strlv)){
+        a <- grid_gen_lv(input$strlv)
+        plt_grid(a)
+        A <<- a
+        B <<- a
+        }
+      }
+    , bg = "transparent")
   })
 
   output$git <- renderText({
@@ -33,7 +48,7 @@ shinyServer(function(input, output) {
 
   output$cor <- renderText({
     c = input$plot_click
-    if (!all(is.na(c))) {
+    if (!all(is.null(c))) {
       i <- 10 - floor(as.numeric(c$y) + 0.5)
       j <- floor(as.numeric(c$x) + 0.5)
       if (i %in% 1:9 && j %in% 1:9) {
@@ -49,10 +64,8 @@ shinyServer(function(input, output) {
 
   observeEvent(input$keys, {
     observeEvent(input$plot_click, {
-      c = input$plot_click
-
-
-      if (!all(is.na(c))) {
+      c <- input$plot_click
+      if (!all(is.null(c))) {
         if ((as.numeric(c$x) < 10) &&
             (as.numeric(c$x) > 0) &&
             (as.numeric(c$y) < 10) &&
@@ -67,7 +80,6 @@ shinyServer(function(input, output) {
               k <<- NULL
             }
           }
-
         }
       }
     })
@@ -79,7 +91,7 @@ shinyServer(function(input, output) {
   })
 
   observeEvent(input$dbl, {
-    c = input$dbl
+    c <- input$dbl
     i <- 10 - floor(as.numeric(c$y) + 0.5)
     j <- floor(as.numeric(c$x) + 0.5)
     if (!is.na(A[i, j])) {
@@ -111,10 +123,12 @@ shinyServer(function(input, output) {
   })
   observeEvent(input$Nglv, {
     output$plot <- renderPlot({
-      a = grid_gen_lv(input$Nglv)
-      plt_grid(a)
-      A <<- a
-      B <<- a
+      if (!is.null(input$Nglv)) {
+        a <- grid_gen_lv(input$Nglv)
+        plt_grid(a)
+        A <<- a
+        B <<- a
+      }
     }, bg = "transparent")
   })
 
@@ -130,7 +144,8 @@ shinyServer(function(input, output) {
     if (isTRUE(input$solconf)) {
       output$plot <- renderPlot({
         plt_grid(solver(B))
-        A <<- solver(B)
+        B <<- solver(B)
+        A <<- B
       }, bg = "transparent")
     }
   })

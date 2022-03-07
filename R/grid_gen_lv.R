@@ -1,37 +1,49 @@
-####generation of the grid with levels
-
+#' grid_gen_lv()
+#'
+#'
+#' This function generates a sudoku grid for four levels of playing "Easy", "Difficult","Hard" and "Legend" based
+#'  on the number of backtraking does the finction \code{\link[RSDK]{bt_solver}} did to solve the grid.
+#'
+#' @param lv A string argument level for the grid and must be "Easy", "Difficult","Hard" or "Legend"
+#'
+#' @return A sudoku grid associate to the level in \code{lv}
+#'
+#' @examples
+#' grid_gen_lv("Easy")
+#' grid_gen_lv("Legend")
+#'@export
 grid_gen_lv <- function(lv) {
   if (lv == "Easy") {
     repeat {
-      A = grid_gen(51)
-      if (bt_solver(A)[[2]] < 100)
-        break
+      A <- grid_gen(45)
+      K <- bt_solver(A)
+      if (K$Backtraking < 75)
+        return(A)
     }
 
   }
   else if (lv == "Difficult") {
     repeat {
-      A = grid_gen(54)
-      if (bt_solver(A)[[2]] %in% 100:200)
-        break
+      A <- grid_gen(48)
+      K <- bt_solver(A)
+      if (K$Backtraking %in% 260:76)
+        return(A)
     }
-
   }
   else if (lv == "Hard") {
     repeat {
-      A = grid_gen(57)
-      if (bt_solver(A)[[2]] %in% 200:300)
-        break
+      A <- grid_gen(51)
+      K <- bt_solver(A)
+      if (K$Backtraking %in% 261:600)
+        return(A)
     }
-
   }
   else if (lv == "Legend") {
     repeat {
-      A = grid_gen(60)
-      if (bt_solver(A)[[2]] > 300)
-        break
+      A <- grid_gen(54)
+      K <- bt_solver(A)
+      if (K$Backtraking > 600)
+        return(A)
     }
-
   }
-  return(A)
 }

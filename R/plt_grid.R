@@ -1,4 +1,14 @@
-################################# plot grid
+#' plt_grid()
+#'
+#' This function plots a given sudoku grid
+#'
+#' @param X A sudoku grid
+#'
+#' @return a plot of the grid
+#' @examples plt_grid(X=grid_gen_cplt())
+#' @importFrom grDevices rgb
+#' @importFrom graphics lines par plot rect text
+#' @export
 plt_grid <- function(X) {
   par(mar = c(0, 0, 0, 0))
   plot(
