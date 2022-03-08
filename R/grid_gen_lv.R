@@ -17,7 +17,7 @@ grid_gen_lv <- function(lv) {
     repeat {
       A <- grid_gen(45)
       K <- bt_solver(A)
-      if (K$Backtraking < 75)
+      if (K$Backtracking < 75)
         return(A)
     }
 
@@ -26,7 +26,7 @@ grid_gen_lv <- function(lv) {
     repeat {
       A <- grid_gen(48)
       K <- bt_solver(A)
-      if (K$Backtraking %in% 260:76)
+      if (K$Backtracking %in% 260:76)
         return(A)
     }
   }
@@ -34,7 +34,7 @@ grid_gen_lv <- function(lv) {
     repeat {
       A <- grid_gen(51)
       K <- bt_solver(A)
-      if (K$Backtraking %in% 261:600)
+      if (K$Backtracking %in% 261:600)
         return(A)
     }
   }
@@ -42,7 +42,7 @@ grid_gen_lv <- function(lv) {
     repeat {
       A <- grid_gen(54)
       K <- bt_solver(A)
-      if (K$Backtraking > 600)
+      if (K$Backtracking > 600)
         return(A)
     }
   }

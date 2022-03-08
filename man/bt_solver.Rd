@@ -10,10 +10,10 @@ bt_solver(x)
 \item{x}{A sudoku grid}
 }
 \value{
-A list of two elements in the first one there is the grid x solved as a matrix of 9 by 9, and the second one contains the number of backtraking does R do to solving it.
+A list of two elements in the first one there is the grid x solved as a matrix of 9 by 9, and the second one contains the number of backtracking does R do to solving it.
 }
 \description{
-This function is a recurcive function that solves a sudoku grid using the backtraking algorithme
+This function is a recurcive function that solves a sudoku grid using the backtracking algorithme
 }
 \examples{
 bt_solver(x=grid_gen(49))

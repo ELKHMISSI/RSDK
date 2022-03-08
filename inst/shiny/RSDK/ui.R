@@ -107,7 +107,7 @@ shinyUI(
                  br(),
                  "Solution button gives you the grid competly solved.(don't use it 😈!)",
                  br(),
-                 "If an edited cell turns red that mean that the value on it is on the wrong place (it's already on the row or on the column or on the box), and if it has been turns green it means that the value on it not in the row,column or the box",
+                 "If an edited cell turns red that mean that the value on it is on the wrong place (it's already on the row or on the column or on the box), and if it has been turns green it means that the value on it not in the row,column or the box.",
                  br(),"ENJOY!",
                )
              ),)
