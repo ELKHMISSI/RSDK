@@ -79,8 +79,8 @@ shinyUI(
         br(),
         plotOutput(
           'plot' ,
-          width = "680px" ,
-          height = "680px",
+          width =  "800px" ,
+          height = "800px",
           click = "plot_click",
           dblclick = "dbl"
         ),

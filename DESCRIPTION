@@ -1,11 +1,11 @@
-Package: RSDK
 Type: Package
+Package: RSDK
 Title: Sudoku with R
 Version: 1.0.0
-Author: EL KHMISSI Mohamed <mohamed.el-khmissi01@etu.umontpellier.fr>
+Author: EL KHMISSI Mohamed
 Maintainer: EL KHMISSI Mohamed <mohamed.el-khmissi01@etu.umontpellier.fr>
-Description: This package is a sudoku game package with a shiny application for playing in the game.The package contains a complete sudoku grid generator,incomplete sudoku grid generator for four levels, backtracking solver,and a recursive solver for the incomplete grids.
-License:MIT + file LICENSE
+Description: This is a sudoku game package with a shiny application for playing .
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.2

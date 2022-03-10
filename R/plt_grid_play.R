@@ -10,7 +10,6 @@
 #' @importFrom graphics lines par plot rect text
 #' @export
 plt_grid_play <- function(B, x) {
-  par(mar = c(0, 0, 0, 0))
   plot(
     1,
     type = "n",

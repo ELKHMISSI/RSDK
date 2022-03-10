@@ -10,7 +10,6 @@
 #' @importFrom graphics lines par plot rect text
 #' @export
 plt_grid <- function(X) {
-  par(mar = c(0, 0, 0, 0))
   plot(
     1,
     type = "n",

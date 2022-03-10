@@ -14,12 +14,12 @@ Released under [MIT](/LICENSE) by [@ELKHMISSI](https://github.com/ELKHMISSI).
 
 ## RSDK
 
-RSDK or R SuDoKu is an R package developed for the project of R programmation in the master 1 SSD (Statistiques et sciences des donnés),faculty of science Montpellier.  
+RSDK or R SuDoKu is an R package developed for the project of R programming in the master 1 SSD (Statistiques et sciences des donnés),faculty of science Montpellier.  
 The package contains a shiny application that we can play sudoku on it .
 
 ---
 
-### What is backtraking algorithm?
+### What is backtracking algorithm?
 
 <https://en.wikipedia.org/wiki/Backtracking>
 
