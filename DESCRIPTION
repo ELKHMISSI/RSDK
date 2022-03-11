@@ -1,7 +1,7 @@
 Type: Package
 Package: RSDK
 Title: Sudoku with R
-Version: 1.0.0
+Version: 1.0.1
 Author: EL KHMISSI Mohamed
 Maintainer: EL KHMISSI Mohamed <mohamed.el-khmissi01@etu.umontpellier.fr>
 Description: This is a sudoku game package with a shiny application for playing .
