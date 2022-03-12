@@ -92,6 +92,7 @@ the box), and if it has been turns green it means that the value on it not in th
 
 The function `bt_solver()` in the package use the algorithm of backtracking to solve the incomplete sudoku grid, and it returns a list of two element the first one contains the solved grid, and the second one contains the number of the backtracking, that the function did to solve the grid.
 So the difficulty of each grid is associated to the number of backtracking that the function `bt_solver` did on the resolution of the grid.
+
 For optimization issues we have chosen the median of an array of the number of backtracking for 100 incomplete grids of the same number of empty cells, for example we have chosen 45 empty cells for the "Easy" level,48 empty cells for the "Difficult" level, 51 empty cells for the "Hard" level and "54" empty cells for the "Legend" level.
 And the difficulties are as follow:
 
