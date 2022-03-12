@@ -75,7 +75,7 @@ After launching the application:
 
 + Check button to verify the grid after playing
 
-+ Solution button gives you the grid competly solved.(don't use it 😈!)
++ Solution button gives you the grid completely solved.(don't use it 😈!)
 
 + If an edited cell turns red that mean that the value on it is on the wrong place (it's already on the row or on the column or on 
 the box), and if it has been turns green it means that the value on it not in the row,column or the box
@@ -92,7 +92,7 @@ the box), and if it has been turns green it means that the value on it not in th
 
 The function `bt_solver()` in the package use the algorithm of backtracking to solve the incomplete sudoku grid, and it returns a list of two element the first one contains the solved grid, and the second one contains the number of the backtracking, that the function did to solve the grid.
 So the difficulty of each grid is associated to the number of backtracking that the function `bt_solver` did on the resolution of the grid.
-For optimization issues we have choose the median of an array of the number of backtracking for 100 incomplete grids of the same number of empty cells, for example we've choose 45 empty cells for the "Easy" level,48 empty cells for the "Difficult" level, 51 empty cells for the "Hard" level and "54" empty cells for the "Legend" level.
+For optimization issues we have chosen the median of an array of the number of backtracking for 100 incomplete grids of the same number of empty cells, for example we have chosen 45 empty cells for the "Easy" level,48 empty cells for the "Difficult" level, 51 empty cells for the "Hard" level and "54" empty cells for the "Legend" level.
 And the difficulties are as follow:
 
 + "Easy" level:`#Backtracking` < 75
