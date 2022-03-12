@@ -14,8 +14,9 @@
 RSDK or R SuDoKu is an R package developed for the project of R programming in the master 1 SSD (Statistiques et sciences des donnés),faculty of science Montpellier.  
 The package contains a shiny application that we can play sudoku on it.
 
-For a full documentation : <https://CRAN.R-project.org/package=RSDK>
++ For a full documentation : <https://CRAN.R-project.org/package=RSDK>
 
++ Online with `shinyapps` :<https://el-khmissi.shinyapps.io/rsdk/>
 ---
 
 ### Install RSDK

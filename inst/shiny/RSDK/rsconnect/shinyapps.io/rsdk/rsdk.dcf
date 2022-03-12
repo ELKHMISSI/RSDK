@@ -1,0 +1,11 @@
+name: rsdk
+title:
+username:
+account: rsdk
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 5835608
+bundleId: 5674033
+url: https://rsdk.shinyapps.io/rsdk/
+when: 1647047018.34784
+lastSyncTime: 1647047018.34784
